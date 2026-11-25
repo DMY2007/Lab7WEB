@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Замовлення товару</title>
+</head>
+<body bgcolor="white" text="black">
+    <p align="center">
+        <a href="DidenkoLab07-2.htm">Елементи форми</a> |
+        <a href="DidenkoLab07-3.htm">Анкета</a> |
+        <a href="DidenkoLab07-4.htm">Замовлення</a>
+    </p>
+
+    <h2>Форма замовлення товару</h2>
+    <form action="DidenkoLab07-result.htm" target="_blank" onsubmit="window.open(this.action, this.target); return false;">
+        <p>
+            <label for="account">Номер банківського рахунку:</label><br>
+            <input type="text" name="account" id="account" size="35" maxlength="40">
+        </p>
+        <p>
+            <label for="user">Особистий номер користувача:</label><br>
+            <input type="text" name="user" id="user" size="25" maxlength="30">
+        </p>
+        <p>
+            <label for="goods">Товари (для вибору кількох утримуйте Ctrl):</label><br>
+            <select name="goods" id="goods" size="5" multiple>
+                <option value="notebook">Зошит</option>
+                <option value="pen">Ручка</option>
+                <option value="pencil">Олівець</option>
+                <option value="folder">Папка</option>
+                <option value="eraser">Гумка</option>
+            </select>
+        </p>
+        <p>
+            <label for="comments">Коментарі до замовлення:</label><br>
+            <textarea name="comments" id="comments" rows="5" cols="45"></textarea>
+        </p>
+        <p>
+            Вид оплати:<br>
+            <label><input type="radio" name="payment" value="cash"> Готівковий розрахунок</label><br>
+            <label><input type="radio" name="payment" value="cashless"> Безготівковий розрахунок</label>
+        </p>
+        <p>
+            Додаткова інформація у відповіді:<br>
+            <label><input type="checkbox" name="balance" value="yes"> Дані про залишки на рахунку</label><br>
+            <label><input type="checkbox" name="payments" value="yes"> Список останніх виплат по рахунку</label>
+        </p>
+        <p>
+            <input type="submit" value="Надіслати замовлення">
+            <input type="reset" value="Очистити форму">
+        </p>
+    </form>
+</body>
+</html>
