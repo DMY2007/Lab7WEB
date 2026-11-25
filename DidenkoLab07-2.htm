@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Елементи форми</title>
+</head>
+<body bgcolor="white" text="black">
+    <p align="center">
+        <a href="DidenkoLab07-2.htm">Елементи форми</a> |
+        <a href="DidenkoLab07-3.htm">Анкета</a> |
+        <a href="DidenkoLab07-4.htm">Замовлення</a>
+    </p>
+
+    <h2>Форма з усіма елементами</h2>
+    <form action="DidenkoLab07-result.htm" target="_blank" onsubmit="window.open(this.action, this.target); return false;">
+        <p>
+            <label for="student">Ваше ім’я:</label>
+            <input type="text" name="student" id="student" size="30" maxlength="40">
+        </p>
+        <p>
+            <label for="password">Пароль:</label>
+            <input type="password" name="password" id="password" size="20" maxlength="30">
+        </p>
+        <p>
+            <label for="course">Курс навчання:</label>
+            <select name="course" id="course">
+                <option value="1">Перший</option>
+                <option value="2">Другий</option>
+                <option value="3">Третій</option>
+                <option value="4">Четвертий</option>
+            </select>
+        </p>
+        <p>
+            Форма навчання:<br>
+            <label><input type="radio" name="study" value="full-time"> Денна</label><br>
+            <label><input type="radio" name="study" value="part-time"> Заочна</label>
+        </p>
+        <p>
+            Ваші навички:<br>
+            <label><input type="checkbox" name="skill" value="html"> HTML</label><br>
+            <label><input type="checkbox" name="skill" value="css"> CSS</label><br>
+            <label><input type="checkbox" name="skill" value="python"> Python</label>
+        </p>
+        <p>
+            <label for="about">Декілька слів про себе:</label><br>
+            <textarea name="about" id="about" rows="5" cols="45"></textarea>
+        </p>
+        <p>
+            <label for="attachment">Прикріпити файл:</label>
+            <input type="file" name="attachment" id="attachment">
+        </p>
+        <p>
+            <input type="button" value="Показати дату" onclick="alert(new Date().toLocaleDateString('uk-UA'));">
+            <input type="reset" value="Очистити форму">
+            <input type="submit" value="Надіслати дані">
+        </p>
+    </form>
+</body>
+</html>
